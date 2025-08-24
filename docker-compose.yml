@@ -18,7 +18,7 @@ services:
     networks:
       - sewa-network
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "sewa_user", "-psewa_password"]
       timeout: 20s
       retries: 10
       interval: 10s

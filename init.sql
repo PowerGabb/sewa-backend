@@ -1,5 +1,10 @@
 -- Create database if not exists
 CREATE DATABASE IF NOT EXISTS sewa_kamera_db;
+
+-- Grant privileges to sewa_user
+GRANT ALL PRIVILEGES ON sewa_kamera_db.* TO 'sewa_user'@'%';
+FLUSH PRIVILEGES;
+
 USE sewa_kamera_db;
 
 -- Create users table
